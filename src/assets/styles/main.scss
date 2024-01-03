@@ -7,7 +7,18 @@
  * Import variables
  */
 
+@tailwind base;
+@tailwind components;
 @import "variables";
+
+@layer components {
+    .link-hover {
+        @apply text-info transition duration-200 ease-in-out hover:scale-110 hover:text-infodark;
+    }
+    .section-header {
+        @apply mt-12 mb-3 text-3xl text-info font-semibold;
+    }
+}
 
 /**
  * Import npm dependencies
@@ -24,7 +35,7 @@
  */
 
 @import "layouts/home";
-
+@tailwind utilities;
 /**
  * Do NOT include anything else in this file!
  */

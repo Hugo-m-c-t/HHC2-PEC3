@@ -5,23 +5,83 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Liga de Tenis: Artículo - PEC2 Hugo Manjón-Cabeza Taillefer</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+  <body class="bg-background">
+    <div class="bg-primary">
+      <header class="flex flex-col items-center py-3 w-11/12 mx-auto md:flex-row md:items-center md:justify-around lg:justify-between">
+          <div class="w-4/12 md:py-8 md:w-1/4 lg:w-1/6 xl:w-1/12">
+             <a href="#"><img src="./assets/images/tenisLogo.png" alt="Logo de una pelota de tenis en un escudo y con la palabra 'Tennis' en gris." class=""></a>
+          </div>
+          <ul class="flex flex-col items-center text-3xl font-semibold my-8 md:flex-row md:justify-center md:text-4xl">
+              <li class="mb-8 link-hover md:mb-0 md:pr-8 lg:pr-16">
+                  <a class="" href="#">Liga</a>
+              </li>
+              <li class="text-center link-hover">
+                  <a class="" href="./members.html">Miembros Destacados</a>
+              </li>
+          </ul>
+      </header>
     </div>
-    <include src="./views/footer.html"></include>
+    <main>
+      <div class="md:relative md:text-center">
+      <h1 class="text-info text-5xl font-semibold leading-[3.5rem] my-12 md:my-0 text-center 
+      md:absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] md:py-8 md:w-full
+      md:text-6xl md:text-white md:bg-white md:bg-opacity-10 md:backdrop-blur md:px-6">3ª LIGA DE LOS NARANJOS - Liga Píxel</h1>
+      <img src="./assets/images/cancha.jpg" class="h-1/6 lg:h-[400px] lg:w-full lg:object-cover">
+      </div>
+      <div class="w-4/5 mt-12 mx-auto text-xl md:text-2xl lg:w-[70%]">
+        <div class="row">
+            <div class="col text-info">
+              <p>¡Llega la 3ª edición de nuestra liga! Gracias a todo vuestro apoyo podemos seguir realizando
+              estos eventos, ¡y en esta ocasión estrenamos página web! Recordad que podéis contactar con 
+              Juana para comprar camisetas personalizadas, cuyos beneficios se destinarán a que esta liga
+              siga adelante. Entre otras cosas, el dinero irá para los premios que ofrecemos por primera
+              vez en esta edición. Si quedas dentro del podio, ¡te podrás llevar algunas recompensas!</p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col">
+              <h2 class="section-header"><i class="fa-solid fa-rectangle-list mx-2" style="color: #3581b8;"></i>Formato de la liga</h2>
+            </div>
+          </div>
+          <div class="grid gap-8 grid-cols-1 lg:grid-cols-2">
+            <div class="col">
+              <p class="mb-10 leading-8 text-info">¡Tenis al puro estilo del videojuego! Estrenamos formato nuevo con mecánicas que pondrán
+                todas las cartas sobre la mesa. 
+              </p>
+              <blockquote class="bg-primary border-4 border-solid border-white rounded-lg p-5 mb-16">
+                <p class="text-center text-black">Voy a apostarlo todo e intentar ganar con tres vidas.</p>
+                <footer class="mx-4 text-lg text-gray-500">— Alfredo, ganador de las dos primeras ligas</footer>
+              </blockquote>
+              <img src="./assets/images/Trofeo.png" class="my-5">
+            </div>
+            <div class="col leading-8 text-info">
+              <p class="my-10 lg:mt-0">En esta liga además de puntos, habrá <i>Puntos de Vida</i>. Cada jugador tiene tres vidas, y
+              cada vez que pierda un partido, también perderá una vida. Si llegas a 0, ¡estás fuera! Ganar
+              un partido te otorga 10 puntos, y si ganas tres seguidos consigues un <i>Combo</i>, que otorga
+              15 puntos extra.</p>
+              <p class="mb-10">¡Todo al rojo! Los jugadores que tengan dos vidas o más pueden apostar cada partido dos vidas
+                en vez de una. Si pierde, se eliminan dos vidas, pero si se gana, se obtienen 10 puntos extra.
+              </p>
+              <p class="mb-10">Cada partido tendrá una duración predeterminada de 1 hora o 1 set, lo que ocurra antes. Se
+                permite que ambos jugadores acuerden que se extienda la duración de un partido, pero debe 
+                comunicarse al encargado con al menos dos días de antelación.</p>
+              <p>En esta liga prima la estrategia. Elige bien tus cartas y llega a la cima. ¡El que tenga más puntos
+                cuando sólo quede un jugador gana!</p>
+            </div>
+          </div>
+          <include src="components/premios.html">
+            {
+              "gold": "Primer puesto: Tarjeta regalo 50€ (plataforma a elegir)",
+              "silver": "Segundo puesto: Pack 12 pelotas de tenis",
+              "bronze": "Tercer puesto: Camiseta Liga Píxel"
+            }
+          </include>
+      </div>
+    </main>
+    <include src="./components/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Liga de Tenis: Miembros - PEC2 Hugo Manjón-Cabeza Taillefer</title>
+  </head>
+  <body class="bg-background">
+    <div class="bg-primary">
+      <header class="flex flex-col items-center py-3 w-11/12 mx-auto md:flex-row md:items-center md:justify-around lg:justify-between">
+          <div class="w-4/12 md:py-8 md:w-1/4 lg:w-1/6 xl:w-1/12">
+             <a href="./index.html"><img src="./assets/images/tenisLogo.png" alt="Logo de una pelota de tenis en un escudo y con la palabra 'Tennis' en gris." class=""></a>
+          </div>
+          <ul class="flex flex-col items-center text-3xl font-semibold my-8 md:flex-row md:justify-center md:text-4xl">
+              <li class="mb-8 link-hover md:mb-0 md:pr-8 lg:pr-16">
+                  <a class="" href="./index.html">Liga</a>
+              </li>
+              <li class="text-center link-hover">
+                  <a class="" href="#">Miembros Destacados</a>
+              </li>
+          </ul>
+      </header>
+    </div>
+    <main class="container-fluid">
+      <h1 class="text-info text-5xl text-center font-semibold leading-[3.5rem] my-12 mx-8"><i class="fa-solid fa-users mx-2" style="color: #3581b8;"></i>Miembros destacados de la liga<i class="fa-solid fa-users mx-2" style="color: #3581b8;"></i></h1>
+      <div class="mx-4 flex justify-center flex-wrap">
+        <include src="components/miembro.html">
+          {
+            "nombre": "Alfredo Reyes",
+            "desc": "Ganador de las primeras dos ligas. ¡Su apellido le viene al pelo!",
+            "link": "./assets/images/Alfredo.png"
+          }
+        </include>
+        <include src="components/miembro.html">
+          {
+            "nombre": "Juana Gómez",
+            "desc": "Se le da de muerte el tenis, ¡y es la creadora de esta liga!",
+            "link": "./assets/images/Juana.png"
+          }
+        </include>
+        <include src="components/miembro.html">
+          {
+            "nombre": "María Pérez",
+            "desc": "Dice que ha ganado varios premios regionales, pero nadie lo ha verificado.",
+            "link": "./assets/images/Maria.png"
+          }
+        </include>
+        <include src="components/miembro.html">
+          {
+            "nombre": "Hugo Manjón-Cabeza",
+            "desc": "No sabe jugar muy bien, ¡pero ha creado esta web!",
+            "link": "./assets/images/Hugo.png"
+          }
+        </include>
+        <include src="components/miembro.html">
+          {
+            "nombre": "Pablo López",
+            "desc": "No le gusta mucho el tenis, lo obligaron a unirse.",
+            "link": "./assets/images/Pablo.png"
+          }
+        </include>
+        <include src="components/miembro.html">
+          {
+            "nombre": "Cristina Marín",
+            "desc": "La rival de Alfredo. No piensa dejarle ganar ninguna liga más.",
+            "link": "./assets/images/Cristina.png"
+          }
+        </include>
+      </div>
+    </main>
+    <include src="./components/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>
